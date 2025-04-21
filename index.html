@@ -3,44 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elemroot OÜ - Teie usaldusväärne partner elektritööde ja tehniliste lahenduste vallas">
+    <meta name="keywords" content="Elemroot, elektritööd, tehnilised lahendused, Eesti">
+    <meta name="author" content="Elemroot OÜ">
+    <meta name="robots" content="index, follow">
     <title>Elemroot OÜ</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
         <div class="card">
             <div class="logo">
-                <h1>Elemroot OÜ</h1>
+                <h1>Elemroot</h1>
+            </div>
+            <div class="construction-banner">
+                <h3><i class="fas fa-hard-hat"></i> Koduleht on arendamisel</h3>
+                <p>Täname külastamast! Meie koduleht on hetkel veel arendamisel. Peagi lisame siia rohkem infot meie teenuste ja lahenduste kohta.</p>
+                <div class="construction-scene">
+                    <div class="drawing-board"></div>
+                    <div class="architect">
+                        <div class="hair"></div>
+                        <div class="head"></div>
+                        <div class="helmet"></div>
+                        <div class="glasses"></div>
+                        <div class="body"></div>
+                        <div class="arm-left"></div>
+                        <div class="arm-right"></div>
+                        <div class="leg-left"></div>
+                        <div class="leg-right"></div>
+                        <div class="pencil"></div>
+                    </div>
+                    <div class="construction-element">
+                        <div class="brick"></div>
+                        <div class="brick"></div>
+                        <div class="brick"></div>
+                        <div class="brick"></div>
+                        <div class="brick"></div>
+                        <div class="brick"></div>
+                        <div class="brick"></div>
+                        <div class="brick"></div>
+                    </div>
+                    <div class="ruler"></div>
+                </div>
             </div>
             <div class="contact-info">
-                <div class="contact-item">
+                <div class="contact-item" onclick="copyToClipboard('+37258588600')">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
                     </div>
                     <div class="contact-details">
                         <h3>Telefon</h3>
-                        <a href="tel:+37258588600">+372 58588600</a>
+                        <span class="contact-value">+372 58588600</span>
                     </div>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item" onclick="copyToClipboard('elemroot@elemroot.com')">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="contact-details">
                         <h3>E-post</h3>
-                        <a href="mailto:elemroot@elemroot.com">elemroot@elemroot.com</a>
+                        <span class="contact-value">elemroot@elemroot.com</span>
                     </div>
                 </div>
             </div>
+            <div id="copyFeedback" class="copy-feedback">Kopeeritud!</div>
         </div>
         <footer>
-            <p>&copy; 2025 Elemroot OÜ. Kõik õigused kaitstud.</p>
+            <p>&copy; 2025 Elemroot. Kõik õigused kaitstud.</p>
         </footer>
     </div>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const feedback = document.getElementById('copyFeedback');
+                feedback.classList.add('show');
+                setTimeout(() => feedback.classList.remove('show'), 2000);
+            });
+        }
+    </script>
 </body>
 </html>
