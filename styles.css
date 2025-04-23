@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #1A2C42;
-    --secondary-color: #2A3F5F;
-    --accent-color: #5F73A1;
+    --primary-color: #0C1E3E;
+    --secondary-color: #4E5F8A;
+    --accent-color: #00B8F1;
     --text-color: #333333;
     --light-text: #666666;
-    --white: #FFFFFF;
-    --light-bg: #F5F7FA;
+    --white: #F7F9FC;
+    --light-bg: #DCE3EC;
     --border-color: #E1E5EB;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --construction-bg: rgba(255, 248, 220, 0.95);
@@ -63,6 +63,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--accent-color);
+}
+
+#logoRect {
+    fill: currentColor;
+    transition: fill 0.3s ease;
 }
 
 .logo h1 {
